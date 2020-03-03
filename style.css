@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Open+Sans&display=swap');
+
+*{
+  box-sizing:border-box;  
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+h1{
+  font-family:'Montserrat Alternates', sans-serif;
+  letter-spacing:10px;
+  transform:rotate(-15deg);
+  font-size:40px;
+  color:gold;
+  text-shadow: 5px 0px 0px royalblue;
+}
+
+#dex{
+  display:flex;
+  flex-wrap:wrap; /*Content will move to next line once it cannot fit*/
+  align-items:space-between;
+  justify-content:center;
+  max-width:1200px;
+  margin-bottom:50px;
+}
+
+.pokemon{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  border-radius:10px;
+  text-align:center;
+  margin:10px;
+  padding:20px;
+  box-shadow: -5px 5px 10px black; /* Box shadow can really help bring something like this together, giving a 3d effect and helping where the backgrounds are very similar colours*/
+}
+
+.dex-entry-image{
+  /* You may need to play with padding and margins here and on the container to get the best fit and make the cards line up as neatly as possible. I found with less margin and padding, some lines would fit more cards than others */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:whitesmoke; /*adding a background to the container is such a neat way to make the image pop - great idea from Florin!*/
+  box-shadow:0px 1px 1px black;
+}
+
+.about{
+  text-transform:uppercase;
+}
+
+.number{
+  background:whitesmoke;
+  border-radius:20px;
+  font-size:1rem;
+  box-shadow:1px 1px 1px black;
+}
+
+footer{
+  font-family:'Montserrat Alternates', sans-serif;
+  display:flex;
+  padding:10px 0px 0px 0px;
+  font-size:14px;
+  align-items:center;
+  justify-content:space-around;
+  position:fixed;
+  bottom:0;
+  background-color:black;
+  color:white;
+  width:100vw;
+}
+
+footer > h2{
+  margin:0;
+  padding:0 10px;
+}
+
+#projectSrcBtn{
+  background:transparent;
+  color:white;
+  border-radius:20px;
+  text-decoration:none;
+  border:1px solid white;
+  padding:5px;
+  margin-bottom:10px;
+}
+
+@media (max-width: 400px){
+   footer{
+    display:block;
+  }
+  footer > h2{
+    font-size:1em;
+  }
+  #projectSrcBtn{
+    position:absolute;
+    top:5px;
+    font-size:0.5em;
+    right:20px;
+  }
+}
